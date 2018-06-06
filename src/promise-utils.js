@@ -3,7 +3,7 @@ module.exports.timeout = timeout;
 
 function timeout(p, t) {
   const failure = new Promise( (resolve, reject) => {
-    setTimeout(() => reject('timed out'), t)
+    setTimeout(() => reject(new Error('Timed out')), t)
   });
   return Promise.race([failure, p]);
 }
