@@ -4,7 +4,7 @@
   "description": "",
   "main": "timeout.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha --compilers js:babel-core/register ./test/**/*.test.js",
+    "test": "NODE_ENV=test || SET \"NODE_ENV=test\" && mocha --require babel-core/register ./test/**/*.test.js",
     "predev": "rimraf dist .cache",
     "dev": "parcel index.html"
   },

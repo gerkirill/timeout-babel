@@ -9,7 +9,7 @@ describe('timeout', function() {
         await timeout(sleep(100), 20);
         assert.fail('no timeout occured');
       } catch(e) {
-        assert.equal(e, 'timed out');
+        assert.equal(e.message, 'Timed out');
       }
   });
 
